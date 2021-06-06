@@ -1,0 +1,32 @@
+Problems
+5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+solutions
+//ejercicio 5
+const invertirCadena = (cadena = "") =>console.log(cadena.split("").reverse().join(""));    
+//ejercicio 6
+const contarPalabras = (cadena = "", palabra = "") => {
+    let EXPRESIONREGULAR = new RegExp(palabra, "ig");
+    let ARRAYCADENAS = cadena.match(EXPRESIONREGULAR);
+    console.log(ARRAYCADENAS.length);
+}
+//ejercicio 7
+const palindromo=(cadena="")=>{
+    let inverso=cadena.split("").reverse().join("");
+    if(cadena.toLowerCase===inverso.toLowerCase){
+        return "es [palindromo";
+    }else{
+        return "no es palindromo"
+    }
+}
+
+//EJERCICIO 8
+const eliminaPatron=(cadena="",patron="")=>
+(!texto)
+? console.warn("No ingresaste ningun texto a evaluar"):
+(!patron)
+? console.warn("introduce un patron para eliminarlo del texto")
+:console.info(cadena.replace(new RegExp(patron,"ig"),""))
